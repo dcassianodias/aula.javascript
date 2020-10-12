@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo Vetor</title>
+</head>
+    
+<body>
+    <script>
+        var soma = media = 0;
+        var valor = new Array(5);
+        for (posição = 0; posição <= 5; posição++) {
+            valor[posição] = posição * 2;
+            soma += valor[posição];
+            document.write("<br> Valor obtido: ",+ valor[posição]);
+        }
+        
+        media = soma/5;
+        document.write("<br> <br> Média dos valores do vetor: " +media);
+        document.write("<br> <br> Valores maiores que a média <br>");
+        for (posição=0; posição <= 5; posição++) {
+            if (valor[posição] > media) {
+                document.write("<br> Valor obtido: " + valor[posição]);
+            }
+        }
+    </script>
+</body>
+
+</html>

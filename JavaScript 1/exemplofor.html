@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo Estrutura de repetição "for"</title>
+</head>
+    
+<body>
+    <script>
+        var contador, preço, media, total = 0;
+        var base = 3;
+        for (contador = 1; contador <= base; contador ++) {
+            preço = window.prompt("Digite o preço do produto" , "");
+            preço = Number(preço);
+            total += preço;
+        }
+        media = total / base;
+        document.write("<br>" + "Total a pagar = " + total);
+        document.write("<br>" + "Valor médio = " + media);
+    </script>
+</body>
+
+</html>
