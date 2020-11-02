@@ -1,0 +1,30 @@
+<DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo 30</title>
+</head>    
+
+<body>
+    <table border>
+        <script>
+            var linha, coluna;
+            var tabela = new Array(2);
+            
+            tabela[0] = new Array(2);
+            tabela[1] = new Array(2);
+            
+            for(linha = 0; linha < 2; linha++){
+                document.write("<tr>");
+                
+                for (coluna = 0; coluna < 2; coluna++){
+                    tabela[linha][coluna] = window.prompt("Digite um número: ", "")
+                    document.write("<td>" + tabela[linha][coluna] + "</td>");
+                }
+                
+                document.write("</tr>")
+            }
+        </script>
+    </table>
+</body>
+</html>

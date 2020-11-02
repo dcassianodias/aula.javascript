@@ -1,0 +1,77 @@
+<DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo 31</title>
+    <script>
+        function testarNome(nome) {
+            var qtd = nome.length;
+            
+            if((nome == "") || (qtd < 10) || (qtd > 60))
+                window.alert("O campo nome deve ter:\No mínimo 10 caracteres\nNo máximo 60 caracteres\nNão pode estar em branco");
+        }
+        
+        function testarEmail(email) {
+            var arroba = email.indexOf("0");
+            var ponto = email.indexOf(".");
+            
+            if ((arroba == -1) || (ponto == -1))
+                window.alert("O campo email deve ter:\narroba e ponto");
+        }
+        
+        function testarDia(dia) {
+            if (dia > 31)
+                window.alert("O campo dia deve ser menor ou igual a 31");
+        }
+        
+        function testarMes(mes) {
+            if (mes > 12)
+                window.alert("O campo mês deve ser menor ou igual a 12");
+        }
+        
+        function testarAno(ano) {
+            var qtd = ano.length;
+            var data = new Date();
+            var anoAtual = data.getFullYear();
+            
+            if((qtd !=4) || (ano < 1900) || (ano >  anoAtual))
+                window.alert("O campo ano deve ter:\nNo mínimo quatro digitos\nEstar entre 1900 e o ano atual");
+        }
+        
+        function testarSenha(senha) {
+            var qtd = senha.length;
+            var email = document.getElementById('email').value;
+            var usuario = email.substring(0, email.indexOf("0"));
+        }
+        
+        function testarConfSenha(confSenha) {
+            if(confSenha != document.getElementById("senha").value)
+                window.alert("O campo confirmação de senha deve ser igual ao campo senha");
+        }
+    </script>
+</head>    
+
+<body>
+    <form id="f1" method="post" action="">
+        <p><label for="nome">Nome:</label>
+            <input type="text" id="nome" onblur="testarNome(this.value);"></p>
+        
+        <p><label for="email">E-Mail</label>
+            <input type="text" id="email" onblur="testarEmail(this.value);"></p>
+        
+        <p><label for="dia">Data de Nascimento</label>
+            <input type="text" id="dia" size="5" placeholder="dia" onblur="testarDia(this.value);">
+            <input type="text" id="mes" size="5" placeholder="mes" onblur="testarMes(this.value);">
+            <input type="text" id="ano" size="5" placeholder="ano" onblur="testarAno(this.value);"></p>
+        
+        <p><label for="senha">Senha</label>
+            <input type="password" id="senha" onblur="testarSenha(this.value);"></p>
+        
+        <p><label for="confsenha">Senha</label>
+            <input type="password" id="confsenha" onblur="testarConfSenha(this.value);"></p>
+        
+        <p><input type="submit" value="Enviar"></p>
+    
+    </form>
+</body>
+</html>

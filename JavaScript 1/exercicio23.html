@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo 23</title>    
+</head>
+    
+<body>
+    <script>
+        var data = new Date();
+        
+        var dias = data.getDay();
+        var diam = data.getDate();
+        var mes = data.getMonth();
+        var ano = data.getFullYear();
+        
+        var diaext, mesext;
+        
+        switch (dias) {
+            case 0:
+                diaext = "Domingo";
+                break;
+                
+            case 1:
+                diaext = "Segunda-Feira";
+                break;
+                
+            case 2:
+                diaext = "Terça-Feira";
+                break;
+                
+            case 3:
+                diaext = "Quarta-Feira";
+                break;
+                
+            case 4:
+                diaext = "Quinta-Feira";
+                break;
+                
+            case 5:
+                diaext = "Sexta-Feira";
+                break;
+                
+            case 6:
+                diaext = "Sábado";                
+        }
+        
+        switch (mes) {
+            case 0:
+                mesext = "Janeiro"
+                break;
+                
+            case 1:
+                mesext = "Fevereiro"
+                break;
+                
+            case 2:
+                mesext = "Março"
+                break;
+                
+            case 3:
+                mesext = "Abril"
+                break;
+                
+            case 4:
+                mesext = "Maio"
+                break;
+                
+            case 5:
+                mesext = "Junho"
+                break;
+                
+            case 6:
+                mesext = "Julho"
+                break;
+                
+            case 7:
+                mesext = "Agosto"
+                break;
+                
+            case 8:
+                mesext = "Setembro"
+                break;
+                
+            case 9:
+                mesext = "Outubro"
+                break;
+                
+            case 10:
+                mesext = "Novembro"
+                break;
+                
+            case 11:
+                mesext = "Dezembro"
+                break;
+        }
+        
+        document.write(diaext + " , " + diam + " de " + mesext + " de " + ano);
+    </script>
+</body>
+</html>
